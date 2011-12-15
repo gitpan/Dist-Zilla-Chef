@@ -4,7 +4,7 @@
       "Jeffrey Ryan Thalhammer <jeff@imaginative-software.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Dist::Zilla version 4.300005, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "perl_5"
    ],
@@ -38,7 +38,7 @@
             "Dist::Zilla::App" : "0",
             "File::Path" : "0",
             "Moose::Autobox" : "0",
-            "Pinto" : "0",
+            "Pinto" : "0.029",
             "Pinto::Creator" : "0",
             "perl" : "5.006",
             "strict" : "0",
@@ -56,19 +56,19 @@
    "provides" : {
       "Dist::Zilla::App::Command::cook" : {
          "file" : "lib/Dist/Zilla/App/Command/cook.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Dist::Zilla::App::Command::scrub" : {
          "file" : "lib/Dist/Zilla/App/Command/scrub.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Dist::Zilla::App::Command::stock" : {
          "file" : "lib/Dist/Zilla/App/Command/stock.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Dist::Zilla::Chef" : {
          "file" : "lib/Dist/Zilla/Chef.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -82,6 +82,6 @@
          "web" : "https://github.com/thaljef/Dist-Zilla-Chef"
       }
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }
 

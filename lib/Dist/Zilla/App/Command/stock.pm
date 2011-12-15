@@ -5,20 +5,33 @@ package Dist::Zilla::App::Command::stock;
 use strict;
 use warnings;
 
-use Pinto;
+use Pinto 0.029;    # better Git support
 use Pinto::Creator;
 use Moose::Autobox;
 use Dist::Zilla::App -command;
 
 #-------------------------------------------------------------------------------
 
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 
 #-------------------------------------------------------------------------------
+
+sub opt_spec {
+
+    return (
+
+        [ author =>  'include author dependencies' ],
+
+    );
+}
+
+#-------------------------------------------------------------------------------
+
 sub execute {
     my ($self, $opt, $arg) = @_;
 
     my @phases = qw(build test configure runtime);
+    push @phases, 'author' if $opt->{author};
     my @deps = $self->_extract_dependencies($self->zilla, \@phases);
     $self->_stock_pantry(@deps);
 
@@ -70,16 +83,15 @@ sub _stock_pantry {
 sub _create_or_find_pantry {
     my ($self) = @_;
 
-    # TODO: Look for a .git or .svn directory in the root directory
-    # and then use the appropriate Store class.  Beware that the
-    # Store::VCS::Git expects that the pantry itself is the root of
-    # the work tree, not the zilla root.
-
     my $pan = $self->zilla->root->subdir('pan');
     return $pan if -e $pan;
 
+    my $store = -e $self->zilla->root->subdir('.svn') ? 'Pinto::Store::VCS::Svn'
+              : -e $self->zilla->root->subdir('.git') ? 'Pinto::Store::VCS::Git'
+              : 'Pinto::Store::File';
+
     my $creator = Pinto::Creator->new(root_dir => $pan);
-    $creator->create(noinit => 1);
+    $creator->create(noinit => 1, store => $store);
 
     return $pan;
 }
@@ -100,7 +112,7 @@ Dist::Zilla::App::Command::stock - stock the pantry with ingredients for your di
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -122,7 +134,13 @@ None.
 
 =head1 OPTIONS
 
-None.
+=over 4
+
+=item --author
+
+Also stock author-time dependencies in the pantry.
+
+=back
 
 =head1 NOTES
 

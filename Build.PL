@@ -20,7 +20,7 @@ my %module_build_args = (
     "Jeffrey Ryan Thalhammer <jeff\@imaginative-software.com>"
   ],
   "dist_name" => "Dist-Zilla-Chef",
-  "dist_version" => "0.001",
+  "dist_version" => "0.002",
   "license" => "perl",
   "module_name" => "Dist::Zilla::Chef",
   "recommends" => {},
@@ -30,7 +30,7 @@ my %module_build_args = (
     "Dist::Zilla::App" => 0,
     "File::Path" => 0,
     "Moose::Autobox" => 0,
-    "Pinto" => 0,
+    "Pinto" => "0.029",
     "Pinto::Creator" => 0,
     "perl" => "5.006",
     "strict" => 0,

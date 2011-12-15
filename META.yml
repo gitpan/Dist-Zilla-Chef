@@ -10,7 +10,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Dist::Zilla version 4.300005, CPAN::Meta::Converter version 2.112150'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,22 +25,22 @@ no_index:
 provides:
   Dist::Zilla::App::Command::cook:
     file: lib/Dist/Zilla/App/Command/cook.pm
-    version: 0.001
+    version: 0.002
   Dist::Zilla::App::Command::scrub:
     file: lib/Dist/Zilla/App/Command/scrub.pm
-    version: 0.001
+    version: 0.002
   Dist::Zilla::App::Command::stock:
     file: lib/Dist/Zilla/App/Command/stock.pm
-    version: 0.001
+    version: 0.002
   Dist::Zilla::Chef:
     file: lib/Dist/Zilla/Chef.pm
-    version: 0.001
+    version: 0.002
 requires:
   App::cpanminus: 1.5
   Dist::Zilla::App: 0
   File::Path: 0
   Moose::Autobox: 0
-  Pinto: 0
+  Pinto: 0.029
   Pinto::Creator: 0
   perl: 5.006
   strict: 0
@@ -48,4 +48,4 @@ requires:
 resources:
   bugtracker: https://github.com/thaljef/Dist-Zilla-Chef/issues
   repository: git://github.com/thaljef/Dist-Zilla-Chef.git
-version: 0.001
+version: 0.002

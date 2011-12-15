@@ -7,7 +7,7 @@ use warnings;
 
 #-------------------------------------------------------------------------------
 
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 
 #-------------------------------------------------------------------------------
 1;
@@ -26,7 +26,7 @@ Dist::Zilla::Chef - Cook your distributions with Dist::Zilla
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
