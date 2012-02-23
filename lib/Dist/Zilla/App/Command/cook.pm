@@ -9,7 +9,7 @@ use Dist::Zilla::App -command;
 
 #-------------------------------------------------------------------------------
 
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.003'; # VERSION
 
 #-------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ Dist::Zilla::App::Command::cook - build and test your dist from scratch
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

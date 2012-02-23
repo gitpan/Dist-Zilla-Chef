@@ -4,7 +4,7 @@
       "Jeffrey Ryan Thalhammer <jeff@imaginative-software.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300005, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.113640",
    "license" : [
       "perl_5"
    ],
@@ -35,40 +35,41 @@
       "runtime" : {
          "requires" : {
             "App::cpanminus" : "1.5",
-            "Dist::Zilla::App" : "0",
-            "File::Path" : "0",
-            "Moose::Autobox" : "0",
-            "Pinto" : "0.029",
-            "Pinto::Creator" : "0",
+            "Dist::Zilla::App" : 0,
+            "File::Path" : 0,
+            "Moose::Autobox" : 0,
+            "Pinto" : "0.030",
+            "Pinto::Creator" : 0,
+            "Version::Requirements" : 0,
             "perl" : "5.006",
-            "strict" : "0",
-            "warnings" : "0"
+            "strict" : 0,
+            "warnings" : 0
          }
       },
       "test" : {
          "requires" : {
-            "File::Find" : "0",
-            "File::Temp" : "0",
-            "Test::More" : "0"
+            "File::Find" : 0,
+            "File::Temp" : 0,
+            "Test::More" : 0
          }
       }
    },
    "provides" : {
       "Dist::Zilla::App::Command::cook" : {
          "file" : "lib/Dist/Zilla/App/Command/cook.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       },
       "Dist::Zilla::App::Command::scrub" : {
          "file" : "lib/Dist/Zilla/App/Command/scrub.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       },
       "Dist::Zilla::App::Command::stock" : {
          "file" : "lib/Dist/Zilla/App/Command/stock.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       },
       "Dist::Zilla::Chef" : {
          "file" : "lib/Dist/Zilla/Chef.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       }
    },
    "release_status" : "stable",
@@ -82,6 +83,6 @@
          "web" : "https://github.com/thaljef/Dist-Zilla-Chef"
       }
    },
-   "version" : "0.002"
+   "version" : "0.003"
 }
 

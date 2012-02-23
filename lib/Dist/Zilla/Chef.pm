@@ -7,7 +7,7 @@ use warnings;
 
 #-------------------------------------------------------------------------------
 
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.003'; # VERSION
 
 #-------------------------------------------------------------------------------
 1;
@@ -18,7 +18,7 @@ our $VERSION = '0.002'; # VERSION
 
 =for :stopwords Jeffrey Ryan Thalhammer Imaginative Software Systems cpan testmatrix url
 annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata
-placeholders
+placeholders metacpan
 
 =head1 NAME
 
@@ -26,7 +26,7 @@ Dist::Zilla::Chef - Cook your distributions with Dist::Zilla
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -163,7 +163,7 @@ L<http://www.cpantesters.org/distro/D/Dist-Zilla-Chef>
 
 CPAN Testers Matrix
 
-The CPAN Testers Matrix is a website that provides a visual way to determine what Perls/platforms PASSed for a distribution.
+The CPAN Testers Matrix is a website that provides a visual overview of the test results for a distribution on various Perls/platforms.
 
 L<http://matrix.cpantesters.org/?dist=Dist-Zilla-Chef>
 

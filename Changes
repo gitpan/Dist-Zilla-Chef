@@ -1,3 +1,8 @@
+0.003     2012-02-22 17:06:36 America/Los_Angeles
+
+     Updated to match API changes in Pinto.  Now requires
+     Pinto-0.30 or later.
+
 0.002     2011-12-15 00:31:55 America/Los_Angeles
 
      The "stock" command now has an --author option, to stock

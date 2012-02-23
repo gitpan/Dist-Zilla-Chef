@@ -5,14 +5,15 @@ package Dist::Zilla::App::Command::stock;
 use strict;
 use warnings;
 
-use Pinto 0.029;    # better Git support
+use Pinto 0.030;    # better Git support
 use Pinto::Creator;
 use Moose::Autobox;
 use Dist::Zilla::App -command;
+use Version::Requirements;
 
 #-------------------------------------------------------------------------------
 
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.003'; # VERSION
 
 #-------------------------------------------------------------------------------
 
@@ -70,7 +71,7 @@ sub _stock_pantry {
     my ($self, @deps) = @_;
 
     my $pan   = $self->_create_or_find_pantry();
-    my $pinto = Pinto->new(root_dir => $pan);
+    my $pinto = Pinto->new(root => $pan);
     $pinto->new_batch(noinit => 1, nocommit => 1);
     $pinto->add_action('Import', package_name => $_) for @deps;
     $pinto->run_actions();
@@ -90,7 +91,7 @@ sub _create_or_find_pantry {
               : -e $self->zilla->root->subdir('.git') ? 'Pinto::Store::VCS::Git'
               : 'Pinto::Store::File';
 
-    my $creator = Pinto::Creator->new(root_dir => $pan);
+    my $creator = Pinto::Creator->new(root => $pan);
     $creator->create(noinit => 1, store => $store);
 
     return $pan;
@@ -112,7 +113,7 @@ Dist::Zilla::App::Command::stock - stock the pantry with ingredients for your di
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 

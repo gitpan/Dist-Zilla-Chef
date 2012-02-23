@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Chef - Cook your distributions with Dist::Zilla
 
 VERSION
-    version 0.002
+    version 0.003
 
 DESCRIPTION
     Dist::Zilla::Chef is a suite of Dist::Zilla commands that help you build
@@ -125,8 +125,8 @@ SUPPORT
 
     *   CPAN Testers Matrix
 
-        The CPAN Testers Matrix is a website that provides a visual way to
-        determine what Perls/platforms PASSed for a distribution.
+        The CPAN Testers Matrix is a website that provides a visual overview
+        of the test results for a distribution on various Perls/platforms.
 
         <http://matrix.cpantesters.org/?dist=Dist-Zilla-Chef>
 
